@@ -1,1 +1,10 @@
-AI_Model_Photos-20260328T061619Z-1-001.zip
+/data/**
+!/data/**/*.dvc
+!/data/**/.gitignore
+
+__pycache__/
+*.pyc
+.env
+
+*.pkl
+*.joblib
