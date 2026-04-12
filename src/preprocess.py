@@ -1,14 +1,14 @@
 import torchvision.datasets as datasets
 from torchvision import transforms
 import numpy as np
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 import random
 import torch
 
 class PrepData(Dataset):
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, **kwargs):
+        super().__init__()
  
         data_norm = transforms.Compose([
             transforms.ToTensor(),
@@ -17,7 +17,7 @@ class PrepData(Dataset):
 
         dataset = datasets.MNIST(
             root="./data/raw",
-            train=True,
+            train=kwargs.get("train"),
             download=True,
             transform=data_norm
         )
