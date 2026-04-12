@@ -3,6 +3,7 @@
 
 /models/**
 !/models/**/*.dvc
+!/models/**/*.gitignore
 
 __pycache__/
 *.pyc
