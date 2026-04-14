@@ -78,12 +78,12 @@ class TrainTest:
                 except Exception as e:
                     raise ValueError(f"Could not load the model. {e}")
 
-# trainer = TrainTest(train_batch_size=64, test_batch_size=1000, learning_rate=0.001)
+trainer = TrainTest(train_batch_size=64, test_batch_size=1000, learning_rate=0.001)
 
 # if training and testing use this
-# trainer.train_model()
-# trainer.test_model()
-# trainer.save_or_load(save=True)
+trainer.train_model()
+trainer.test_model()
+trainer.save_or_load(save=True)
 
 # if only testing use this
 # trainer.save_or_load(save=False)
